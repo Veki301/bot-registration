@@ -10,7 +10,7 @@ export interface Service {
   auth_tokens?: string[];
   enabled?: boolean;
   tags?: string[];
-  public_keys?: any[];
+  public_keys?: any[] | any; // dirty hack
 }
 
 export function ServiceFromJSON(json: any): Service {

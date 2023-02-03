@@ -13,7 +13,7 @@ export default function HomePage() {
 
   useEffect(() => {
     fetchServiceList();
-  });
+  }, []);
 
   const fetchServiceList = () => {
     api

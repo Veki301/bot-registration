@@ -56,6 +56,9 @@ export interface NewService {
    * @memberof NewService
    */
   tags?: string[];
+
+  // todo: dirty hack
+  public_keys?: string;
 }
 
 export function NewServiceFromJSON(json: any): NewService {

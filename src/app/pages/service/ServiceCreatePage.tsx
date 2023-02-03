@@ -13,14 +13,15 @@ const ServiceCreatePage: React.FC = () => {
   const router = useRouter();
 
   const handleSubmit = (service: NewService | Service) => {
-    const newService = service as NewService;
+    const newService = {
+      ...(service as NewService),
+      public_key: service.public_keys,
+      tags: [defaultTag],
+    };
     api
       .createNewService({
         // TODO: hardcoded tags?
-        body: {
-          ...newService,
-          tags: [defaultTag],
-        },
+        body: newService,
       })
       .then(() => router.push(routes.home))
       .catch((e) => {

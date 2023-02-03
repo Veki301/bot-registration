@@ -6,7 +6,7 @@ import {
 } from "../generated";
 
 // the localhost is here just as a template for local development
-export const romanBasePath = "http://localhost:3000"; //process.env.REACT_APP_BASE_PATH ?? `${window.origin}${window.location.pathname}`; // TODO: window.wire.env.BACKEND_REST
+export const romanBasePath = ""; //process.env.REACT_APP_BASE_PATH ?? `${window.origin}${window.location.pathname}`; // TODO: window.wire.env.BACKEND_REST
 
 const getApiPath = (path: string) => {
   const pathWithSlash = path.endsWith("/") ? "" : "/";

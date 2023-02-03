@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-export const BASE_PATH = "http://localhost:3000".replace(/\/+$/, ""); // TODO: window.wire.env.BACKEND_REST
+export const BASE_PATH = "".replace(/\/+$/, ""); // TODO: window.wire.env.BACKEND_REST
 
 const isBlob = (value: any) =>
   typeof Blob !== "undefined" && value instanceof Blob;
